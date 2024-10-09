@@ -13,9 +13,30 @@
     font-size: 40px;
     text-align: center;
     border: 2px solid black;
+    border-radius: 10px;   
 }
+
 table{
-    background-color: aquamarine;
+    /* Syntax: radial-gradient(shape, color1, color2, ...) */
+    /* Syntax: linear-gradient(direction, color1, color2, ...) */
+    background:linear-gradient(to left ,rgb(47, 33, 33),grey ) ;
     font-size: 20px;
     border: 3px solid black;
+    border-radius: 2%;
+}
+
+.s1{
+    border-radius: 5px;
+}
+.s2{
+    border-radius: 4px;
+    color: rgb(9, 11, 11);
+    background-color: white;
+}
+.s2:hover{
+    background-color: black;
+    color: white;
+}
+.s3{
+    color: white;
 }
