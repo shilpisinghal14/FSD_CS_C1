@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        width: 500px;
+        height: 300px;
+        background-color: antiquewhite;
+        margin-left: 400px;
+        margin-top: 200px;
+        text-align: center;
+        padding: 50px 75px;
+      }
+
+      .d1 {
+        width: 450px;
+        height: 250px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: white;
+      }
+
+      .d2 {
+        padding-top: 10px;
+        background-color: rgb(247, 248, 249);
+        height: 100px;
+      }
+
+      .btn {
+        margin-top: 20px;
+        border-radius: 10px;
+        justify-content: space-between;
+      }
+      #b1 {
+        background-color: rgb(19, 197, 19);
+        height: 30px;
+        border-radius: 8px;
+        border-color: white;
+      }
+      #b2 {
+        background-color: rgb(232, 20, 20);
+        height: 30px;
+        border-radius: 8px;
+        border-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div">
+      <div class="d1">
+        <h1>Random Joke Generator</h1>
+        <div class="d2">
+          <h3 id="joke">Press the button for a joke!!!</h3>
+          <p>Character count: <span id="count">0</span></p>
+        </div>
+        <div class="btn">
+          <button id="b1" onclick="getJoke()">Get Joke</button>
+          <button id="b2" onclick="clrJoke()">Clear Joke</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let api = "https://v2.jokeapi.dev/joke/Any";
+
+      function getJoke() {
+        fetch(api)
+          .then((response) => {
+            data = response.json();
+            return data;
+          })
+          .then((data) => {
+            document.getElementById("joke").innerHTML = data.setup;
+            document.getElementById("count").innerHTML = data.setup.length;
+          });
+      }
+      function clrJoke() {
+        document.getElementById("joke").innerHTML =
+          "Press the button for a joke";
+        document.getElementById("count").innerHTML = "0";
+      }
+    </script>
+  </body>
+</html>
