@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events in JavaScript</h1>
+    <button id="btn">Click Me!</button>
+    <p id="para">1</p>
+    <label for="nm">Name:</label>
+    <input type="text" placeholder="Enter your name" id="nm"><br>
+    <p id="name">2</p>
+    <label for="color">Select a color:</label>
+    <select for="color" id="select">
+        <option value="">--Choose--</option>
+        <option value="red">Red</option>
+        <option value="blue">blue</option>
+        <option value="green">Green</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+    </select><br>
+    <p id="clr">3</p>
+    <label for="tx">Type something:</label>
+    <input type="tx" placeholder="Start typing..." id="td"><br>
+    <p id="td">4</p>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            document.getElementById("para").innerHTML = "1"
+        });
+        document.getElementById("nm").addEventListener("focus",function(){
+            document.getElementById("name").innerHTML = "Input Field is focused"
+        });
+        document.getElementById("name").addEventListener("blur",function(){
+            document.getElementById("nm").innerHTML = "Input Field is focused"
+        });
+        document.getElementById("select").addEventListener("change",function(){
+            document.getElementById("clr").innerHTML = "You selected:" +color
+        });
+        document.getElementById("tx").addEventListener("keyup",function(){
+            document.getElementById("td").innerHTML = "2"
+        });
+    </script>
+    <script>
+        let button = document.createElement("button")
+        button.innerText = "Click me"
+        button.id = "btn"
+        document.body.appendChild(button)
+
+        let para = document.createElement("p")
+        para.innerText = "---Insert Here---"
+        para.id = "para"
+        document.body.appendChild(para)
+    </script>
+</body>
+</html>
