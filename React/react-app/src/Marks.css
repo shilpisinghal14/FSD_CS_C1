@@ -1,0 +1,17 @@
+#sem{
+    text-align: center;
+    background-color:antiquewhite;
+    color: black;
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+h1{
+    background-color: aqua;
+    color: black;
+    font-size: 15px;
+}
+h2{
+    background-color: aqua;
+    color: black;
+    font-size: 10px;
+}

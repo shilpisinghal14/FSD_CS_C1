@@ -1,0 +1,17 @@
+#disp{
+    text-align: center;
+    background-color: antiquewhite;
+    color: rgb(242, 157, 46);
+    border: 2px solid green;
+    border-radius: 10px;
+}
+h1{
+    background-color: rgb(24, 69, 55);
+    color: black;
+    font-size: 20px;
+}
+h2{
+    background-color: bisque;
+    color: black;
+    font-size: 15px;
+}
