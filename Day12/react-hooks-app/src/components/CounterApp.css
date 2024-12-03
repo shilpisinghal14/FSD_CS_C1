@@ -1,0 +1,32 @@
+body{
+    padding: 0;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.disp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    color: bisque;
+    border: 5px solid white;
+    width: 120px;
+    height: 160px;
+    margin-left: 170px;
+    margin-top: 10px;
+
+    box-shadow: 10px 10px 10px;
+    padding: 20px;
+}
+.btn{
+    background-color: aquamarine;
+}
+.header{
+    background-color:aquamarine;
+    text-align: center;
+    color: black;
+    font-size: small;
+
+}
